@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#5987b6"
+    tools:context="com.example.daniel.payer.Activity_New_Loan"
+    android:id="@+id/activity_new_loan">
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:id="@+id/topbar_add"
+        android:background="@drawable/topbar_add"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/note"
+        android:layout_alignEnd="@+id/note" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:hint="$$"
+        android:background="#fffff1"
+        android:id="@+id/loan_amount"
+        android:padding="5dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_alignTop="@+id/name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <AutoCompleteTextView
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:id="@+id/name"
+        android:background="#fffff1"
+        android:gravity="left"
+        android:padding="5dp"
+        android:layout_below="@+id/topbar_add"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="365dp"
+        android:layout_height="130dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:hint="Note on Loan"
+        android:id="@+id/note"
+        android:background="#fffff1"
+        android:textIsSelectable="true"
+        android:gravity="top"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/loan_amount"
+        android:layout_alignLeft="@+id/lend"
+        android:layout_alignStart="@+id/lend" />
+
+    <ImageButton
+        android:layout_width="365dp"
+        android:layout_height="45dp"
+        android:id="@+id/lend"
+        android:background="@drawable/lend"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/note"
+        android:layout_alignRight="@+id/loan_amount"
+        android:layout_alignEnd="@+id/loan_amount" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/lend"
+        android:layout_alignLeft="@+id/lend"
+        android:layout_alignStart="@+id/lend"
+        android:layout_marginLeft="93dp"
+        android:layout_marginStart="93dp">
+
+        <RadioButton android:id="@+id/send_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send a loan"
+            android:onClick="onRadioButtonClicked"
+            android:checked="true"
+            android:layout_below="@+id/lend"
+            android:layout_alignRight="@+id/ask_loan"
+            android:layout_alignEnd="@+id/ask_loan"
+            android:layout_marginTop="15dp" />
+
+        <RadioButton android:id="@+id/ask_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ask for loan"
+            android:onClick="onRadioButtonClicked"
+            android:layout_below="@+id/send_loan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+    </RadioGroup>
+
+</RelativeLayout>

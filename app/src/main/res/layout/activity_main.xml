@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity"
+    android:id="@+id/main" >
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/mainmenu"
+            android:background="#27ae60"
+            android:clickable="false" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:id="@+id/topbar_credit"
+                android:background="@drawable/topbar_credit"/>
+
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="55dp"
+                android:visibility="visible"
+                android:id="@+id/click_else"
+                android:background="@drawable/click_else"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/click_add"
+                android:layout_marginRight="2dp"/>
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:visibility="visible"
+                android:id="@+id/click_add"
+                android:background="@drawable/click_add"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ExpandableListView
+                android:id="@+id/eloan_list"
+                android:background="#ffffff"
+                android:layout_width="fill_parent"
+                android:layout_height="450dp"
+                android:layout_below="@+id/topbar_credit"
+                android:layout_alignRight="@+id/click_add"
+                android:layout_alignEnd="@+id/click_add"
+                android:layout_margin="5dp">
+            </ExpandableListView>
+
+            <Button
+                android:id="@+id/notification_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get notifications"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/loggedout"
+            android:background="@drawable/login_background_2">
+
+            <com.facebook.widget.LoginButton
+                android:id="@+id/authButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="98dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    </ViewFlipper>
+
+</RelativeLayout>
